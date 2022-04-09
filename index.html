@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Nhật Duy - PS21977 -github</title>
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300&family=Roboto&display=swap"
+        rel="stylesheet">
+        <script src="js/js.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <!-- Tiêu đề -->
+            <div class="title">
+                <h3>Giải Phương Trình ax<sup>2</sup> + bx + c = 0</h3>
+            </div>
+            <!-- Số lần giải -->
+            <div>
+                Số lần giải: <b id="slg">0</b>
+            </div>
+            <hr>
+            <!-- Hệ số a -->
+            <div class="number" id="numberA">
+                <label for="">Nhập hệ số a</label>
+                <input id="hsa" type="text">
+            </div>
+            <!-- Hệ số b -->
+            <div class="number" id="numberB">
+                <label for="">Nhập hệ số b</label>
+                <input id="hsb" type="text">
+            </div>
+            <!-- Hệ số c -->
+            <div class="number" id="numberC">
+                <label for="">Nhập hệ số c</label>
+                <input id="hsc" type="text">
+            </div>
+            <!-- Button giải phương trình và random -->
+            <div id="gpt_choso">
+                <!-- Button giải phương trình -->
+                <button type="button" id="GPT" disabled onclick="ptb2.gpt(),ptb2.dem();">Giải
+                    phương trình</button>
+                <!-- Button randomPhuongTrinh -->
+                <button type="button" id="random__number" onclick="ptb2.cs(),ptb2.khoaNut();">Cho số</button>
+            </div>
+            <div id="box">
+                <span id="result">
+
+                </span>
+            </div>
+            <div id="ngayThangNam">
+
+                <span id="ngay"></span>/
+                <span id="thang"></span>/
+                <span id="nam"></span>
+            </div>
+            <div id="dong_ho">
+                <span id="gio">00</span>
+                <span id="phut">00</span>
+                <span id="giay">00</span>
+            </div>
+            <script src="js/Clock.js"></script>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var date = new Date();
+    document.getElementById('ngay').innerText = '0' + date.getDay()
+    document.getElementById('thang').innerText = '0' + date.getMonth()
+    document.getElementById('nam').innerHTML = date.getFullYear()
+</script>
